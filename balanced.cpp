@@ -32,14 +32,15 @@ int main() {
               balanced = Matches(symbol, openSymbol);
             }
         }
-        cin.get(symbol);
-/*         }
+  
+        }
         catch (std::exception e){
-          std::cerr << "Error: " << e.what() << std::endl; */
+          std::cerr << "Error: " << e.what() << std::endl;
         }
         catch (FullStack){
           cerr << "Error: Full Stack" << endl;
         }
+              cin.get(symbol);
       }
       while (!stack.IsEmpty() && balanced){
         try{
@@ -50,7 +51,6 @@ int main() {
         }
         catch(std::exception e){
           std::cerr << "Error: " << e.what() << std::endl;
-
         }
       }
       if (balanced){
